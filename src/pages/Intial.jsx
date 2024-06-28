@@ -37,8 +37,8 @@ const Initial = () => {
         }}
       ></div>
       <div className="absolute inset-0 flex flex-col justify-center text-white">
-        <h1 className="text-6xl font-bold mb-5 font-raleway ml-3" data-sal="slide-up" data-sal-duration="1000">Alex Smith</h1>
-        <p className="text-2xl ml-3" data-sal="slide-up" data-sal-duration="1000">
+        <h1 className="text-7xl font-bold mb-5 font-ralewayBold ml-3" data-sal="slide-up" data-sal-duration="1000">Alex Smith</h1>
+        <p className="lg:text-2xl sm:text-lg ml-3" data-sal="slide-up" data-sal-duration="1000">
           <span ref={typedRef} className='border-b-[2px] border-sky-500'></span>
         </p>
       </div>

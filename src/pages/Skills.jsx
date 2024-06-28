@@ -21,7 +21,7 @@ const Skills = () => {
     <div className="mb-8 p-3 bg-sky-50">
       <SectionTitle title={"Skills"} />
       <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-8 grid md:grid-cols-2 gap-6">
         {skillsData.map((skill, index) => (
           <div key={index} className="mb-1">
             <div className="flex justify-between mb-1" data-sal="slide-up" data-sal-duration="1000">

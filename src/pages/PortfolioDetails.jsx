@@ -31,7 +31,7 @@ const PortfolioDetails = () => {
             <div className="mx-auto my-8 p-3">
                 <div className="flex flex-wrap -mx-4">
                     <div className="w-full lg:w-2/3 px-4 lg:mb-0" data-sal="slide-up" data-sal-delay="800" data-sal-duration="1000">
-                        <div className="relative">
+                        <div>
                             <Carousel
                                 showThumbs={false}
                                 showStatus={false}

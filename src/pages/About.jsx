@@ -67,7 +67,7 @@ const About = () => {
       </div>
       <div className="flex flex-wrap  mt-40 mb-20 sm:space-x-12" data-sal="slide-up" data-sal-duration="1750">
         {skills.map((skill, index) => (
-          <div key={index} className="flex flex-col  mb-6 sm:mb-0" data-sal="slide-up" data-sal-duration="1000">
+          <div key={index} className="flex lg:flex-col md:flex-wrap sm:flex-wrap  mb-6 sm:mb-5" data-sal="slide-up" data-sal-duration="1000">
             <div className="flex items-center mb-2 ml-16">
               <img src={skill.icon} alt={skill.name} className="w-10 h-10 mr-2" />
               <p className="text-3xl sm:text-5xl font-bold ">
