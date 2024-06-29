@@ -23,28 +23,44 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     };
 
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = ['home', 'about', 'resume', 'portfolio', 'services', 'contact'];
-            sections.forEach((section) => {
-                const element = document.getElementById(section);
-                if (element && isElementVisible(element)) {
-                    setActiveLink(section.charAt(0).toUpperCase() + section.slice(1));
+        const sections = ['home', 'about', 'resume', 'portfolio', 'services', 'contact'];
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2,
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                console.log(`Section: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    setActiveLink(sectionId.charAt(0).toUpperCase() + sectionId.slice(1));
                 }
             });
         };
 
-        window.addEventListener('scroll', handleScroll);
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        sections.forEach((section) => {
+            const element = document.getElementById(section);
+            if (element) {
+                console.log(`Observing section: ${section}`);
+                observer.observe(element);
+            } else {
+                console.error(`Element with ID ${section} not found`);
+            }
+        });
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            sections.forEach((section) => {
+                const element = document.getElementById(section);
+                if (element) {
+                    observer.unobserve(element);
+                }
+            });
         };
     }, []);
-
-    const isElementVisible = (element) => {
-        const elementWindow = element.getBoundingClientRect();
-        return (
-            elementWindow.top < window.innerHeight && elementWindow.bottom >= 0
-        );
-    };
 
     return (
         <div>
@@ -76,7 +92,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 </div>
                 <ul className="mt-4 w-[270px]">
                     {['Home', 'About', 'Resume', 'Portfolio', 'Services'].map((link) => (
-                        <li key={link} className={`p-5 flex items-center space-x-2 text-lg group ${activeLink === link ? 'text-white' : 'text-gray-400'}`}>
+                        <li key={link} className={`p-5 flex items-center space-x-2 text-lg group ${activeLink === link ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
                             <i className={`bi bi-${getIconName(link)} ${activeLink === link ? 'text-sky-500' : 'text-gray-400'}`}></i>
                             <a href={`#${link.toLowerCase()}`} onClick={() => handleSetActiveLink(link)} className={`${activeLink === link ? 'text-white' : 'text-gray-400'} group-hover:text-white font-poppins text-md`}>
                                 {link}
@@ -114,7 +130,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                             )}
                         </ul>
                     )}
-                    <li key="Contact" className={`p-4 flex items-center space-x-2 text-lg  group ${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'}`}>
+                    <li key="Contact" className={`p-4 flex items-center space-x-2 text-lg  group ${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
                         <i className={`bi bi-envelope ${activeLink === 'Contact' ? 'text-sky-500' : 'text-gray-400 group-hover:text-sky-500'}`}></i>
                         <a href="#contact" onClick={() => handleSetActiveLink('Contact')} className={`${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'} group-hover:text-white`}>
                             Contact
