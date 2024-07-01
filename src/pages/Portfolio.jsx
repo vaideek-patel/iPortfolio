@@ -23,7 +23,7 @@ const Portfolio = () => {
     const [activeLink, setActiveLink] = useState('ALL');
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
-    const [selectedIndex, setSelectedIndex] = useState(0); // Track the index of the selected image
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
     const links = ['ALL', 'APP', 'PRODUCT', 'BRANDING', 'BOOKS'];
 
@@ -46,7 +46,7 @@ const Portfolio = () => {
 
     const handleZoomInClick = (item, index) => {
         setSelectedImage(item);
-        setSelectedIndex(index); // Set the index of the selected image
+        setSelectedIndex(index);
         setIsModalOpen(true);
     };
 
