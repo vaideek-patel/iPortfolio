@@ -10,10 +10,10 @@ const Initial = () => {
   useEffect(() => {
     const options = {
       strings: [
-        "I'm a Designer",
-        "I'm a Developer",
-        "I'm a Freelancer",
-        "I'm a Photographer"
+        "I'm a <span class='underline-typed'>Designer</span>",
+        "I'm a <span class='underline-typed'>Developer</span>",
+        "I'm a <span class='underline-typed'>Freelancer</span>",
+        "I'm a <span class='underline-typed'>Photographer</span>"
       ],
       typeSpeed: 50,
       backSpeed: 50,
@@ -37,9 +37,9 @@ const Initial = () => {
         }}
       ></div>
       <div className="absolute inset-0 flex flex-col justify-center text-white">
-        <h1 className="text-7xl font-bold mb-5 font-ralewayBold ml-3" data-sal="slide-up" data-sal-duration="1000">Alex Smith</h1>
-        <p className="lg:text-2xl sm:text-lg ml-3" data-sal="slide-up" data-sal-duration="1000">
-          <span ref={typedRef} className='border-b-[2px] border-sky-500'></span>
+        <h2 className="md:text-[64px] text-[32px] font-bold font-ralewayBold ml-3 mt-1" data-sal="slide-up" data-sal-duration="1000">Alex Smith</h2>
+        <p className="text-[26px] ml-3 font-roboto mb-7" data-sal="slide-up" data-sal-duration="1000">
+          <span ref={typedRef}></span>
         </p>
       </div>
     </div>

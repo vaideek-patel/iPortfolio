@@ -34,7 +34,7 @@ const About = () => {
   ];
 
   return (
-    <div className="mb-8 p-5">
+    <div className="mb-8 p-3">
       <div data-sal="slide-up" data-sal-duration="1000">
         <SectionTitle title={"About"} />
       </div>
@@ -43,7 +43,7 @@ const About = () => {
       </p>
       <div className="flex flex-col sm:flex-row mt-8" data-sal="slide-up" data-sal-duration="1000">
         <div className="sm:w-80 sm:h-80 mb-4 sm:mr-8 flex-shrink-0">
-          <img className="w-full h-full object-cover rounded-lg" src={profileImage} alt="Profile" />
+          <img className="w-full h-full object-cover" src={profileImage} alt="Profile" />
         </div>
         <div className="flex-grow">
           <h2 className="text-2xl mb-4 font-ralewayBold">UI/UX Designer & Web Developer.</h2>
@@ -65,18 +65,18 @@ const About = () => {
           <p className="mt-8 text-lg" data-sal="slide-up" data-sal-duration="1000">Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
         </div>
       </div>
-      <div className="flex flex-wrap  mt-40 mb-20 sm:space-x-12" data-sal="slide-up" data-sal-duration="1750">
+      <div className="md:flex md:flex-wrap justify-center pt-40 pb-10 px-10" data-sal="slide-up" data-sal-duration="1750">
         {skills.map((skill, index) => (
-          <div key={index} className="flex lg:flex-col md:flex-wrap sm:flex-wrap  mb-6 sm:mb-5" data-sal="slide-up" data-sal-duration="1000">
-            <div className="flex items-center mb-2 ml-16">
-              <img src={skill.icon} alt={skill.name} className="w-10 h-10 mr-2" />
-              <p className="text-3xl sm:text-5xl font-bold ">
+          <div key={index} className="flex lg:flex-col md:flex-wrap sm:flex-wrap  mb-6 sm:mb-5 p-6" data-sal="slide-up" data-sal-duration="1000">
+            <div className="flex items-center mb-2">
+              <img src={skill.icon} alt={skill.name} className="w-10 h-10" />
+              <p className="text-3xl sm:text-5xl ml-4 font-bold font-roboto ">
                 <CountUp end={skill.number} duration={6} separator="" />
               </p>
             </div>
-            <div className='text-center'>
-              <p className="text-base sm:text-sm">{skill.name}</p>
-              <p className="text-xs text-gray-600">{skill.description}</p>
+            <div className='ml-16'>
+              <p className="text-base sm:text-sm text-left">{skill.name}</p>
+              <p className="text-xs text-gray-600 text-left">{skill.description}</p>
             </div>
           </div>
         ))}
