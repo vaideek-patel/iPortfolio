@@ -21,10 +21,10 @@ const PortfolioDetails = () => {
 
     return (
         <div>
-            <div className="p-3 mb-15 bg-gray-50 flex flex-col lg:flex-row justify-between items-start lg:items-center">
-                <h2 className="text-2xl mt-2 mb-3 font-ralewayBold"><strong>Portfolio Details</strong></h2>
+            <div className="p-3 mb-15 bg-gray-900 flex flex-col lg:flex-row justify-between items-start lg:items-center">
+                <h2 className="text-2xl mt-2 mb-3 font-ralewayBold"><strong className='text-white'>Portfolio Details</strong></h2>
                 <nav className="breadcrumb text-sm text-gray-600 lg:ml-4">
-                    <Link to="/" className="text-sky-500 mr-3">Home</Link> / <span className='ml-2 text-black'>Portfolio Details</span>
+                    <Link to="/" className="text-sky-500 mr-3">Home</Link> / <span className='ml-2 text-white'>Portfolio Details</span>
                 </nav>
             </div>
 

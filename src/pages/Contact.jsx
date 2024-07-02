@@ -57,7 +57,7 @@ const Contact = () => {
                 <div className="flex-[1.3] bg-white p-8 h-auto border shadow-xl" data-sal="slide-up" data-sal-duration="1000">
                     <form className="space-y-4">
                         <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                            <div className="flex-1" data-sal="slide-up" data-sal-delay="200" data-sal-duration="1000">
+                            <div className="MainPage" data-sal="slide-up" data-sal-delay="200" data-sal-duration="1000">
                                 <label className="block text-black mb-1" htmlFor="name">Your Name</label>
                                 <input
                                     type="text"
@@ -65,7 +65,7 @@ const Contact = () => {
                                     className="w-full p-2 border border-gray-300"
                                 />
                             </div>
-                            <div className="flex-1" data-sal="slide-up" data-sal-delay="400" data-sal-duration="1000">
+                            <div className="MainPage" data-sal="slide-up" data-sal-delay="400" data-sal-duration="1000">
                                 <label className="block text-black mb-1" htmlFor="email">Your Email</label>
                                 <input
                                     type="email"

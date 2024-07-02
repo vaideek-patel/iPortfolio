@@ -71,7 +71,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                         src={iPortFolioImage}
                         alt="Profile"
                     />
-                    <h2 className="mt-4 text-2xl font-semibold">Alex Smith</h2>
+                    <h2 className="mt-4 text-2xl font-extrabold font-ralewayBold">Alex Smith</h2>
                 </div>
                 <div className="flex space-x-2">
                     <a href="https://twitter.com" target="_blank" className="bg-gray-800 p-3 rounded-full">
@@ -92,7 +92,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 </div>
                 <ul className="mt-4 w-[270px]">
                     {['Home', 'About', 'Resume', 'Portfolio', 'Services'].map((link) => (
-                        <li key={link} className={`p-5 flex items-center space-x-2 text-lg group ${activeLink === link ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
+                        <li key={link} className={`p-5 flex items-center space-x-2 text-[16px] group ${activeLink === link ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
                             <i className={`bi bi-${getIconName(link)} ${activeLink === link ? 'text-sky-500' : 'text-gray-400'}`}></i>
                             <a href={`#${link.toLowerCase()}`} onClick={() => handleSetActiveLink(link)} className={`${activeLink === link ? 'text-white' : 'text-gray-400'} group-hover:text-white font-poppins text-md`}>
                                 {link}
@@ -101,7 +101,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                     ))}
                     <li className="p-4 flex items-center space-x-2 group">
                         <img src={dropdownIcon} alt="Dropdown Icon" className="w-6 h-6" />
-                        <button onClick={toggleDropdown} className="flex items-center group-hover:text-white text-gray-400 focus:outline-none">
+                        <button onClick={toggleDropdown} className="flex items-center group-hover:text-white text-gray-400 focus:outline-none text-[16px] font-poppins">
                             Dropdown
                         </button>
                     </li>
@@ -130,7 +130,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                             )}
                         </ul>
                     )}
-                    <li key="Contact" className={`p-4 flex items-center space-x-2 text-lg  group ${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
+                    <li key="Contact" className={`p-4 flex items-center space-x-2 text-[16px]  group ${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'} transition-all duration-300`}>
                         <i className={`bi bi-envelope ${activeLink === 'Contact' ? 'text-sky-500' : 'text-gray-400 group-hover:text-sky-500'}`}></i>
                         <a href="#contact" onClick={() => handleSetActiveLink('Contact')} className={`${activeLink === 'Contact' ? 'text-white' : 'text-gray-400'} group-hover:text-white`}>
                             Contact
