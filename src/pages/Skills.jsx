@@ -25,8 +25,8 @@ const Skills = () => {
         {skillsData.map((skill, index) => (
           <div key={index} className="mb-1">
             <div className="flex justify-between mb-1" data-sal="slide-up" data-sal-duration="1000">
-              <span className="font-normal">{skill.name}</span>
-              <span className="font-normal">{skill.percentage}%</span>
+              <span className="font-raleway text-[12px] font-black">{skill.name}</span>
+              <span className="font-raleway text-[12px] font-black">{skill.percentage}%</span>
             </div>
             <div className="w-full bg-gray-300 h-2" data-sal="slide-up" data-sal-duration="1000">
               <div

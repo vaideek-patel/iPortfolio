@@ -100,7 +100,7 @@ const Portfolio = () => {
                         <div key={item.id} className="relative" data-sal="slide-up" data-sal-duration="1000">
                             <div className="border bg-black shadow overflow-hidden group">
                                 <div className='overflow-hidden'>
-                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-20" />
+                                    <img src={item.image} alt={item.name} className="w-full h-full object-cover duration-300 group-hover:opacity-20 group-hover:scale-110" />
                                 </div>
 
                                 <div className="absolute top-4 left-4 p-2 bg-sky-500 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">

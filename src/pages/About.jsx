@@ -17,12 +17,12 @@ const About = () => {
 
   const infoItems = [
     { label: 'Birthday:', value: '1 May 1995' },
-    { label: 'Website:', value: 'www.example.com', link: 'http://www.example.com' },
+    { label: 'Website:', value: 'www.example.com' },
     { label: 'Phone:', value: '+123 456 7890' },
     { label: 'City:', value: 'New York, USA' },
     { label: 'Age:', value: '30' },
     { label: 'Degree:', value: 'Master' },
-    { label: 'Email:', value: 'email@example.com', email: true },
+    { label: 'Email:', value: 'email@example.com' },
     { label: 'Freelance:', value: 'Available' }
   ];
 
@@ -47,7 +47,7 @@ const About = () => {
         </div>
         <div className="flex-grow">
           <h2 className="text-2xl mb-4 font-ralewayBold">UI/UX Designer & Web Developer.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className='text-[16px] font-robotoItalic  text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mt-5">
             {infoItems.map((item, index) => (
               <div key={index} className="flex items-center" data-sal="slide-up" data-sal-duration="1000">
@@ -62,12 +62,12 @@ const About = () => {
               </div>
             ))}
           </div>
-          <p className="mt-8 text-lg" data-sal="slide-up" data-sal-duration="1000">Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
+          <p className="mt-8 text-[16px] font-roboto" data-sal="slide-up" data-sal-duration="1000">Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.</p>
         </div>
       </div>
-      <div className="md:flex md:flex-wrap justify-center pt-40 pb-10 px-10" data-sal="slide-up" data-sal-duration="1750">
+      <div className="md:flex md:flex-wrap justify-center  pt-40 pb-10 px-2" data-sal="slide-up" data-sal-duration="1750">
         {skills.map((skill, index) => (
-          <div key={index} className="flex lg:flex-col md:flex-wrap sm:flex-wrap  mb-6 sm:mb-5 p-6" data-sal="slide-up" data-sal-duration="1000">
+          <div key={index} className="flex lg:flex-col md:flex-wrap sm:flex-wrap  mb-6 sm:mb-5 px-8" data-sal="slide-up" data-sal-duration="1000">
             <div className="flex items-center mb-2">
               <img src={skill.icon} alt={skill.name} className="w-10 h-10" />
               <p className="text-3xl sm:text-5xl ml-4 font-bold font-roboto ">

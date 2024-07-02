@@ -76,13 +76,13 @@ const Resume = () => {
                     <h1 className="text-2xl font-bold mb-5 flex items-center font-ralewayBold" data-sal="slide-up" data-sal-duration="1000">
                         Sumary
                     </h1>
-                    <ul className="relative ml-6">
+                    <ul className="relative">
                         {summaryData.map((item, index) => (
                             <li key={index} className="mb-8 pl-8" data-sal="slide-up" data-sal-duration="1000">
-                                <span className="absolute left-0 top-1.4 w-3 h-3 bg-sky-500 rounded-full"></span>
+                                <span className="absolute left-0 top-1.4 w-3 h-3 border border-sky-500 rounded-full"></span>
                                 <span className="absolute left-1 top-3.5 w-0.5 h-full bg-sky-500"></span>
                                 <h3 className="text-lg mb-2 text-gray-600 font-bold font-raleway">{item.title}</h3>
-                                <p className="mb-2 font-robotoItalic">{item.description}</p>
+                                <p className="mb-2 font-robotoItalic text-black font-thin">{item.description}</p>
                                 <ul className="list-disc ml-4">
                                     {item.bullets.map((point, i) => (
                                         <li key={i} className="mb-1">{point}</li>
@@ -95,13 +95,13 @@ const Resume = () => {
                     <h1 className="text-2xl font-bold mb-2 mt-8 flex items-center font-ralewayBold" data-sal="slide-up" data-sal-duration="1000">
                         Education
                     </h1>
-                    <ul className="relative ml-6">
+                    <ul className="relative">
                         {educationData.map((item, index) => (
                             <li key={index} className="mb-8 pl-8 relative" data-sal="slide-up" data-sal-duration="1000">
-                                <span className="absolute left-0 top-1.4 w-3 h-3 bg-sky-500 rounded-full"></span>
+                                <span className="absolute left-0 top-1.4 w-3 h-3 border border-sky-500 rounded-full"></span>
                                 <span className="absolute left-1 top-3.5 w-0.5 h-full bg-sky-500"></span>
                                 <h3 className="text-lg mb-2 font-raleway text-gray-600 font-bold">{item.title}</h3>
-                                <p className="mb-2">{item.date}</p>
+                                <p className="mb-2 font-raleway text-black font-bold">{item.date}</p>
                                 <h4 className="text-base font-robotoItalic mb-5">{item.company}</h4>
                                 <div>
                                     {item.description.map((point, i) => (
@@ -117,14 +117,14 @@ const Resume = () => {
                     <h1 className="text-2xl font-bold mb-2 flex items-center font-ralewayBold" data-sal="slide-up" data-sal-duration="1000">
                         Professional Experience
                     </h1>
-                    <ul className="relative ml-6">
+                    <ul className="relative ">
                         {experienceData.map((exp, index) => (
                             <li key={index} className="mb-8 pl-8 relative" data-sal="slide-up" data-sal-duration="1000">
-                                <span className="absolute left-0 top-1.4 w-3 h-3 bg-sky-500 rounded-full"></span>
+                                <span className="absolute left-0 top-1.4 w-3 h-3 border border-sky-500 rounded-full"></span>
                                 <span className="absolute left-1 top-3.5 w-0.5 h-full bg-sky-500"></span>
                                 <h3 className="text-lg mb-2 font-raleway text-gray-600 font-bold">{exp.title}</h3>
-                                <p className="mb-2 mt-2">{exp.date}</p>
-                                <h4 className="text-base font-robotoItalic mt-3 mb-3">{exp.company}</h4>
+                                <p className="mb-2 mt-2 font-raleway text-black font-bold">{exp.date}</p>
+                                <h4 className="text-base font-robotoItalic mt-5 mb-5">{exp.company}</h4>
                                 <ul className="list-disc ml-4">
                                     {exp.bullets.map((point, i) => (
                                         <li key={i} className="mb-1 font-roboto">{point}</li>

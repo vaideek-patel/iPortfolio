@@ -11,7 +11,7 @@ const Layout = () => {
   };
 
   const scrollToTop = () => {
-    const container = document.querySelector('.flex-1');
+    const container = document.querySelector('.MainPage');
     if (container) {
       container.scrollTo({
         top: 0,
@@ -27,7 +27,7 @@ const Layout = () => {
 
   useEffect(() => {
     const saveScrollPosition = () => {
-      const container = document.querySelector('.flex-1');
+      const container = document.querySelector('.MainPage');
       const scrollPosition = container ? container.scrollTop : window.scrollY;
       localStorage.setItem('scrollPosition', scrollPosition);
     };
@@ -36,7 +36,7 @@ const Layout = () => {
 
     const scrollPosition = localStorage.getItem('scrollPosition');
     if (scrollPosition) {
-      const container = document.querySelector('.flex-1');
+      const container = document.querySelector('.MainPage');
       if (container) {
         container.scrollTo(0, parseInt(scrollPosition, 10));
       } else {
@@ -63,7 +63,7 @@ const Layout = () => {
       >
         <i className="bi bi-arrow-up text-xl h-1"></i>
       </button>
-      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+      <div className="MainPage overflow-y-auto overflow-x-hidden">
         <Outlet />
         <Footer />
       </div>

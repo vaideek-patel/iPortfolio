@@ -1,5 +1,5 @@
 export const scrollToTop = () => {
-  const container = document.querySelector('.flex-1');
+  const container = document.querySelector('.MainPage');
   if (container) {
     container.scrollTo({
       top: 0,
